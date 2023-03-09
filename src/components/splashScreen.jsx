@@ -7,6 +7,5 @@ const SplashScreen = ({navigation}) => {
     <LottieView source={require('../../assets/splash.json')} autoPlay loop />
   );
 };
-// return navigation.navigate('LoginPage');
 
 export default SplashScreen;

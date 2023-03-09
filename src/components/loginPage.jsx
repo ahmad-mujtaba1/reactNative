@@ -1,30 +1,27 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
-  Button,
   TouchableOpacity,
   Platform,
 } from 'react-native';
+import {
+  onFacebookButtonPress,
+  handleSignIn,
+  onGoogleButtonPress,
+} from '../util/auth';
+import {useDispatch} from 'react-redux';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {login, signup} from '../util/auth';
-import {useDispatch} from 'react-redux';
-import {
-  googleSignIn,
-  SimpleSignIn,
-  storeToken,
-  FacebookSignIn,
-} from '../redux/actions/authActions';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
-import auth from '@react-native-firebase/auth';
-import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
+
 GoogleSignin.configure({
   webClientId:
     '869359136247-dhn54h9ij8sidkuo4e3eskk7o3t7uj0s.apps.googleusercontent.com',
 });
+
 const LoginPage = ({navigation}) => {
   const dispatch = useDispatch();
   const [password, setPassword] = useState(null);
@@ -33,53 +30,9 @@ const LoginPage = ({navigation}) => {
     return navigation.navigate('SignUpPage');
   };
   const navigateToProducts = () => {
-    handleSignIn();
+    handleSignIn(email, password);
   };
-  const handleSignIn = async () => {
-    try {
-      let response = await login(email, password);
-      if ((response.status = '200')) {
-        dispatch(SimpleSignIn(true));
-        dispatch(storeToken(response?.data?.idToken));
-      }
-    } catch (e) {
-      console.log('error', e);
-    }
-  };
-  const onGoogleButtonPress = async () => {
-    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-    const {idToken} = await GoogleSignin.signIn();
-    const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-    const userSignIn = auth().signInWithCredential(googleCredential);
-    console.log(userSignIn);
-    userSignIn.then(user => console.log(user)).catch(e => console.log(e));
-    if (userSignIn) {
-      dispatch(storeToken(await userSignIn.user.uid));
-      dispatch(googleSignIn(true));
-    }
-  };
-  async function onFacebookButtonPress() {
-    const result = await LoginManager.logInWithPermissions([
-      'public_profile',
-      'email',
-    ]);
-    if (result.isCancelled) {
-      throw 'User cancelled the login process';
-    }
-    const data = await AccessToken.getCurrentAccessToken();
-    if (!data) {
-      throw 'Something went wrong obtaining access token';
-    }
-    const facebookCredential = auth.FacebookAuthProvider.credential(
-      data.accessToken,
-    );
-    const userSignIn = auth().signInWithCredential(facebookCredential);
-    userSignIn.then(user => console.log(user)).catch(e => console.log(e));
-    if (userSignIn) {
-      dispatch(storeToken((await userSignIn).user.uid));
-      dispatch(FacebookSignIn(true));
-    }
-  }
+
   return (
     <View style={{flex: 1}}>
       <LinearGradient

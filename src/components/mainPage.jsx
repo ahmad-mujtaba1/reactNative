@@ -1,10 +1,9 @@
-import {React, useState, useEffect} from 'react';
+import {React, useEffect} from 'react';
 import {
   FlatList,
   View,
   StyleSheet,
   Text,
-  SafeAreaView,
   TouchableOpacity,
   Platform,
 } from 'react-native';
@@ -16,13 +15,7 @@ import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons/faCartShopping';
 import {products} from '../../assets/products';
 import {useDispatch, useSelector} from 'react-redux';
-import {
-  googleSignIn,
-  SimpleSignIn,
-  storeToken,
-  FacebookSignIn,
-} from '../redux/actions/authActions';
-import auth from '@react-native-firebase/auth';
+import {handleLogout} from '../util/auth';
 const MainComponent = ({navigation}) => {
   const state = useSelector(state => state.authReducer);
   const dispatch = useDispatch();
@@ -41,26 +34,7 @@ const MainComponent = ({navigation}) => {
   const handleCart = () => {
     return navigation.navigate('cartScreen');
   };
-  const handleLogout = () => {
-    if (state.googleSignIn) {
-      auth()
-        .signOut()
-        .then(() => console.log('user is logged out'));
-      dispatch(storeToken(null));
-      dispatch(googleSignIn(false));
-    }
-    if (state.facebookSignIn) {
-      auth()
-        .signOut()
-        .then(() => console.log('user is logged out'));
-      dispatch(FacebookSignIn(false));
-      dispatch(storeToken(null));
-    }
-    if (state.simpleSignIn) {
-      dispatch(SimpleSignIn(false));
-      dispatch(storeToken(null));
-    }
-  };
+
   return (
     <>
       <LinearGradient
@@ -79,7 +53,9 @@ const MainComponent = ({navigation}) => {
             <Text style={{fontSize: 20, color: 'purple', fontWeight: 'bold'}}>
               Products
             </Text>
-            <TouchableOpacity style={styles.leftButtom} onPress={handleLogout}>
+            <TouchableOpacity
+              style={styles.leftButtom}
+              onPress={() => handleLogout(state)}>
               <Text>Logout</Text>
               <FontAwesomeIcon icon={faBars} size={20} color={'purple'} />
             </TouchableOpacity>
