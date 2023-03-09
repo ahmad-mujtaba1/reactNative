@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UfoLand</string>
+    <string name="facebook_app_id">1275513903040596</string>
+    <string name="facebook_client_token">aeeaa446218f3dce2c006c8951e8bf70</string>
 </resources>

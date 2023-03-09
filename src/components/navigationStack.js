@@ -10,9 +10,7 @@ import {NavigationContainer} from '@react-navigation/native';
 const Stack = createNativeStackNavigator();
 
 const StackToRender = () => {
-  const isLogin = useSelector(state => state.authReducer.token);
-  console.log(isLogin);
-
+  const isLogin = useSelector(state => state.authReducer.emailToken);
   function AuthStack() {
     return (
       <Stack.Navigator

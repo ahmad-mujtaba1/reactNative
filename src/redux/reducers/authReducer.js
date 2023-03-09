@@ -1,22 +1,44 @@
-import {ADD_TOKEN, GET_TOKEN} from '../constants';
-import {REMOVE_TOKEN} from '../constants/index';
+import {ADD_TOKEN, FACEBOOK_SIGN_IN, GET_TOKEN} from '../constants';
+import {REMOVE_TOKEN, GOOGLE_SIGN_IN, SIMPLE_SIGN_IN} from '../constants/index';
 
 const initialState = {
-  token: null,
+  emailToken: null,
+  googleSignIn: null,
+  facebookSignIn: null,
+  simpleSignIn: null,
+  userInfo: null,
 };
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TOKEN:
       return {
-        token: action.payload,
+        ...state,
+        emailToken: action.token,
       };
     case REMOVE_TOKEN:
       return {
-        token: null,
+        ...state,
+        emailToken: null,
       };
     case GET_TOKEN:
       return {
-        token: state.token,
+        ...state,
+        emailToken: state.token,
+      };
+    case GOOGLE_SIGN_IN:
+      return {
+        ...state,
+        googleSignIn: action.payload,
+      };
+    case FACEBOOK_SIGN_IN:
+      return {
+        ...state,
+        facebookSignIn: action.payload,
+      };
+    case SIMPLE_SIGN_IN:
+      return {
+        ...state,
+        simpleSignIn: action.payload,
       };
     default:
       return state;

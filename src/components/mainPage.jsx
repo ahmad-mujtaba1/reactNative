@@ -16,9 +16,15 @@ import {faBars} from '@fortawesome/free-solid-svg-icons/faBars';
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons/faCartShopping';
 import {products} from '../../assets/products';
 import {useDispatch, useSelector} from 'react-redux';
-import {removeToken} from '../redux/actions/authActions';
+import {
+  googleSignIn,
+  SimpleSignIn,
+  storeToken,
+  FacebookSignIn,
+} from '../redux/actions/authActions';
 import auth from '@react-native-firebase/auth';
 const MainComponent = ({navigation}) => {
+  const state = useSelector(state => state.authReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(addProductsToStore(products));
@@ -36,11 +42,24 @@ const MainComponent = ({navigation}) => {
     return navigation.navigate('cartScreen');
   };
   const handleLogout = () => {
-    //dispatch(removeToken());
-    auth()
-      .signOut()
-      .then(() => console.log('user is logged out'));
-    return navigation.navigate('LoginPage');
+    if (state.googleSignIn) {
+      auth()
+        .signOut()
+        .then(() => console.log('user is logged out'));
+      dispatch(storeToken(null));
+      dispatch(googleSignIn(false));
+    }
+    if (state.facebookSignIn) {
+      auth()
+        .signOut()
+        .then(() => console.log('user is logged out'));
+      dispatch(FacebookSignIn(false));
+      dispatch(storeToken(null));
+    }
+    if (state.simpleSignIn) {
+      dispatch(SimpleSignIn(false));
+      dispatch(storeToken(null));
+    }
   };
   return (
     <>

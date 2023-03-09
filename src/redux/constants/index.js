@@ -8,3 +8,6 @@ export const API_KEY = 'AIzaSyAs7IXTApgJttIuFffLqKA9X_-NrPn59vk';
 export const ADD_TOKEN = 'ADD_TOKEN';
 export const REMOVE_TOKEN = 'REMOVE_TOKEN';
 export const GET_TOKEN = 'GET_TOKEN';
+export const GOOGLE_SIGN_IN = 'GOOGLE_SIGN_IN';
+export const FACEBOOK_SIGN_IN = 'FACEBOOK_SIGN_IN';
+export const SIMPLE_SIGN_IN = 'SIMPLE_SIGN_IN';
