@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "869359136247",
+    "project_id": "ufoworld-9708d",
+    "storage_bucket": "ufoworld-9708d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869359136247:android:437c21cc147fb8ed22d2f2",
+        "android_client_info": {
+          "package_name": "com.ufoland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869359136247-acmbqv4hp197jehndg4gul8qfhnj890e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ufoland",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "869359136247-rrdq2f5q0q3ncl6248tntqihdp0id6m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs7IXTApgJttIuFffLqKA9X_-NrPn59vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869359136247-dhn54h9ij8sidkuo4e3eskk7o3t7uj0s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "869359136247-idmaqi89ubnhdsce393mmmqca2fbdj9n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.UfoLand"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
