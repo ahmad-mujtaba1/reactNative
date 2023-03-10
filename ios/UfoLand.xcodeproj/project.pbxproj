@@ -11,13 +11,12 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		179CC3480C9B85AE0BB59495 /* libPods-UfoLand.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4401B9446A672414F2ABE56D /* libPods-UfoLand.a */; };
+		6AC3F40B156AC29FA331D330 /* libPods-UfoLand-UfoLandTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADE5233BE3DF622BED3651 /* libPods-UfoLand-UfoLandTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9D83C8058E31D3272C57AFAE /* Pods_UfoLand_UfoLandTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73C7F8A72355A1A12469E4A /* Pods_UfoLand_UfoLandTests.framework */; };
 		C307132829A2975900F72039 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = C307132729A2975900F72039 /* Fonts */; };
-		C3785C22299C32B2001D4C9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3785C21299C32B2001D4C9F /* GoogleService-Info.plist */; };
 		C3785C25299C36C2001D4C9F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C3785C24299C36C2001D4C9F /* FirebaseAnalytics */; };
 		C3785C27299C36C2001D4C9F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C3785C26299C36C2001D4C9F /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		DAA8C6BCB8AB2C2AE70E27EF /* Pods_UfoLand.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696417DAC3D9485E3747A50A /* Pods_UfoLand.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,21 +33,20 @@
 		00E356EE1AD99517003FC87E /* UfoLandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UfoLandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* UfoLandTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UfoLandTests.m; sourceTree = "<group>"; };
+		10ADE5233BE3DF622BED3651 /* libPods-UfoLand-UfoLandTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UfoLand-UfoLandTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* UfoLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UfoLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = UfoLand/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = UfoLand/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = UfoLand/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = UfoLand/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = UfoLand/main.m; sourceTree = "<group>"; };
-		696417DAC3D9485E3747A50A /* Pods_UfoLand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UfoLand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4401B9446A672414F2ABE56D /* libPods-UfoLand.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UfoLand.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = UfoLand/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EC3B6085CC36D02C5929F52 /* Pods-UfoLand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UfoLand.debug.xcconfig"; path = "Target Support Files/Pods-UfoLand/Pods-UfoLand.debug.xcconfig"; sourceTree = "<group>"; };
 		9B425A0FC9ABE4F5214DBF82 /* Pods-UfoLand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UfoLand.release.xcconfig"; path = "Target Support Files/Pods-UfoLand/Pods-UfoLand.release.xcconfig"; sourceTree = "<group>"; };
 		AC7FBF4C07E21432F361B107 /* Pods-UfoLand-UfoLandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UfoLand-UfoLandTests.debug.xcconfig"; path = "Target Support Files/Pods-UfoLand-UfoLandTests/Pods-UfoLand-UfoLandTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0198C7177C01C25EEC8B913 /* Pods-UfoLand-UfoLandTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UfoLand-UfoLandTests.release.xcconfig"; path = "Target Support Files/Pods-UfoLand-UfoLandTests/Pods-UfoLand-UfoLandTests.release.xcconfig"; sourceTree = "<group>"; };
 		C307132729A2975900F72039 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		C3785C21299C32B2001D4C9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "UfoLand/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E73C7F8A72355A1A12469E4A /* Pods_UfoLand_UfoLandTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UfoLand_UfoLandTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -57,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D83C8058E31D3272C57AFAE /* Pods_UfoLand_UfoLandTests.framework in Frameworks */,
+				6AC3F40B156AC29FA331D330 /* libPods-UfoLand-UfoLandTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +65,7 @@
 			files = (
 				C3785C25299C36C2001D4C9F /* FirebaseAnalytics in Frameworks */,
 				C3785C27299C36C2001D4C9F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				DAA8C6BCB8AB2C2AE70E27EF /* Pods_UfoLand.framework in Frameworks */,
+				179CC3480C9B85AE0BB59495 /* libPods-UfoLand.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +96,6 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				C3785C21299C32B2001D4C9F /* GoogleService-Info.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -110,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				696417DAC3D9485E3747A50A /* Pods_UfoLand.framework */,
-				E73C7F8A72355A1A12469E4A /* Pods_UfoLand_UfoLandTests.framework */,
+				4401B9446A672414F2ABE56D /* libPods-UfoLand.a */,
+				10ADE5233BE3DF622BED3651 /* libPods-UfoLand-UfoLandTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				C3785C22299C32B2001D4C9F /* GoogleService-Info.plist in Resources */,
 				C307132829A2975900F72039 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
