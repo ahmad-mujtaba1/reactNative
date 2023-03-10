@@ -54,10 +54,11 @@ const MainComponent = ({navigation}) => {
               Products
             </Text>
             <TouchableOpacity
-              style={styles.leftButtom}
+              style={styles.buttons}
               onPress={() => handleLogout(state)}>
-              <Text>Logout</Text>
-              <FontAwesomeIcon icon={faBars} size={20} color={'purple'} />
+              <View style={{flex: 1, flexDirection: 'row'}}>
+                <Text>Logout</Text>
+              </View>
             </TouchableOpacity>
           </View>
           <View
@@ -92,6 +93,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     flexWrap: 'wrap',
+  },
+  buttons: {
+    height: Platform.OS === 'ios' ? '18%' : '28%',
+    borderLeftWidth: 1,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: 'white',
+    borderRadius: 7,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#BDB5D5',
   },
 });
 

@@ -1,8 +1,7 @@
-import React, {useEffect} from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+
 import LottieView from 'lottie-react-native';
-import {useState} from 'react';
-const SplashScreen = ({navigation}) => {
+const SplashScreen = () => {
   return (
     <LottieView source={require('../../assets/splash.json')} autoPlay loop />
   );

@@ -90,11 +90,11 @@ const SignUpPage = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.buttons, {flex: 1, flexDirection: 'row'}]}>
-            <Icon
+            {/* <Icon
               name="google"
               size={20}
               style={{backgroundColor: 'transparent'}}
-            />
+            /> */}
             <Text> Google</Text>
           </TouchableOpacity>
         </View>

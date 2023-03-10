@@ -15,6 +15,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faCircleMinus} from '@fortawesome/free-solid-svg-icons/faCircleMinus';
 import {faCirclePlus} from '@fortawesome/free-solid-svg-icons/faCirclePlus';
 import {useDispatch, useSelector} from 'react-redux';
+import {useNavigation} from '@react-navigation/native';
 import {
   addQuantity,
   addToCart,
@@ -22,20 +23,27 @@ import {
 } from '../redux/actions/cartActions';
 const ProductDetails = ({route}) => {
   const dispatch = useDispatch();
+  const navigation = useNavigation();
   const cartItems = useSelector(state => state.cartReducer.cartItems);
   const [quantity, setQuantity] = useState(0);
   const {item} = route.params;
 
   const handleDecrement = () => {
-    dispatch(subtractQuantity(item.id));
-    setQuantity(quantity - 1);
+    if (quantity > 0) {
+      dispatch(subtractQuantity(item.id));
+      setQuantity(quantity - 1);
+    }
   };
   const handleIncreament = () => {
-    dispatch(addQuantity(item.id));
-    setQuantity(quantity + 1);
+    if (quantity >= 0) {
+      dispatch(addQuantity(item.id));
+      setQuantity(quantity + 1);
+    }
   };
   const handleAddToCart = () => {
+    setQuantity(0);
     dispatch(addToCart(item.id));
+    navigation.navigate('mainScreen');
   };
   return (
     <>

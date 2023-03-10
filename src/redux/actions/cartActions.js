@@ -13,12 +13,7 @@ export function addProductsToStore(products) {
     payload: products,
   };
 }
-// export function addToCart(products) {
-//   return {
-//     type: ADD_TO_CART,
-//     id: products,
-//   };
-// }
+
 export const addToCart = id => {
   return {
     type: ADD_TO_CART,
