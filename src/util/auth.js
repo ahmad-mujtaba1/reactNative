@@ -47,8 +47,8 @@ export const onGoogleButtonPress = async () => {
   const googleCredential = auth.GoogleAuthProvider.credential(idToken);
   const userSignIn = auth().signInWithCredential(googleCredential);
   userSignIn.then(user => console.log(user)).catch(e => console.log(e));
-  if (userSignIn) {
-    store.dispatch(storeToken(await userSignIn.user.uid));
+  if (await userSignIn) {
+    store.dispatch(storeToken(await (await userSignIn).user.uid));
     store.dispatch(googleSignIn(true));
   }
 };

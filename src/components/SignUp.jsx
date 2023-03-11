@@ -8,7 +8,7 @@ import {
   Platform,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {signup} from '../util/auth';
 const SignUpPage = ({navigation}) => {
   const [email, setEmail] = useState(null);
@@ -90,11 +90,11 @@ const SignUpPage = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.buttons, {flex: 1, flexDirection: 'row'}]}>
-            {/* <Icon
+            <Icon
               name="google"
               size={20}
               style={{backgroundColor: 'transparent'}}
-            /> */}
+            />
             <Text> Google</Text>
           </TouchableOpacity>
         </View>

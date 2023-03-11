@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   FlatList,
+  Alert,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -105,6 +106,12 @@ const CardView = ({item}) => {
       </View>
     );
   };
+  const handleCheckout = () => {
+    if (cartItems.length > 0) {
+      Alert.alert('thanks for shopping');
+    }
+    navigation.navigate('mainScreen');
+  };
   return (
     <>
       <View style={{flex: 1}}>
@@ -132,7 +139,9 @@ const CardView = ({item}) => {
                 Total Amount: {totalAmmount()}Rs
               </Text>
             </View>
-            <TouchableOpacity style={styles.SignInButton}>
+            <TouchableOpacity
+              style={styles.SignInButton}
+              onPress={handleCheckout}>
               <Text>Proceed To Checkout</Text>
             </TouchableOpacity>
           </View>

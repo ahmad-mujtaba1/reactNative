@@ -16,6 +16,7 @@ import {faCartShopping} from '@fortawesome/free-solid-svg-icons/faCartShopping';
 import {products} from '../../assets/products';
 import {useDispatch, useSelector} from 'react-redux';
 import {handleLogout} from '../util/auth';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const MainComponent = ({navigation}) => {
   const state = useSelector(state => state.authReducer);
   const dispatch = useDispatch();
@@ -57,6 +58,7 @@ const MainComponent = ({navigation}) => {
               style={styles.buttons}
               onPress={() => handleLogout(state)}>
               <View style={{flex: 1, flexDirection: 'row'}}>
+                <Icon name="logout" size={20} color="black" />
                 <Text>Logout</Text>
               </View>
             </TouchableOpacity>
